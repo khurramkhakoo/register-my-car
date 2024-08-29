@@ -2,15 +2,15 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import time
 
-from constants import URL
+from constants *
 from util import *
 
 # Path to your ChromeDriver
-chrome_driver_path = '/usr/local/bin/chromedriver'  # Update this path to where your ChromeDriver is located
+chrome_driver_path = '/usr/local/bin/chromedriver'
 
 # Initialize WebDriver
-service: Service = Service(chrome_driver_path)
-driver: webdriver = webdriver.Chrome(service=service)
+service:Service = Service(chrome_driver_path)
+driver:webdriver = webdriver.Chrome(service = service)
 
 # Navigate to the website
 driver.get(URL)
