@@ -1,4 +1,5 @@
 .idea/
 myenv/
+venv/
 src/register_my_car/__main__.py.BAK
 src/register_my_car/__pycache__/

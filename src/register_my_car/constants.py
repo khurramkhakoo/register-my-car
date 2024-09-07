@@ -1,4 +1,4 @@
-URL = "xxx"
+URL = "https://www.register2park.com/"
 VEHICLE_APT = "xxx"
 VEHICLE_MAKE = "xxx"
 VEHICLE_MODEL = "xxx"
