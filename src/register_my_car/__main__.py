@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import time
 
-from constants *
+from constants import URL
 from util import *
 
 # Path to your ChromeDriver
