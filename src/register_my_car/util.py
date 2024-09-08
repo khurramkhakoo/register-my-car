@@ -67,22 +67,27 @@ def add_vehicle_information(driver: webdriver) -> None:
     try:
         apartment_number_field = driver.find_element(By.ID, 'vehicleApt')
         apartment_number_field.send_keys(os.environ.get('VEHICLE_APT'))
+        print("Filled Apt number")
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleMake')
         apartment_number_field.send_keys(os.environ.get('VEHICLE_MAKE'))
+        print("Filled Vehicle make")
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleModel')
         apartment_number_field.send_keys(os.environ.get('VEHICLE_MODEL'))
+        print("Filled Vehicle model")
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleLicensePlate')
         apartment_number_field.send_keys(os.environ.get('VEHICLE_LICENSE_PLATE'))
+        print("Filled Vehicle license plate")
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleLicensePlateConfirm')
         apartment_number_field.send_keys(os.environ.get('VEHICLE_LICENSE_PLATE'))
+        print("Filled Vehicle license plate again")
         time.sleep(1)
 
         print("Form filled successfully")
