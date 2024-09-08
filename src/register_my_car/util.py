@@ -57,7 +57,7 @@ def choose_visitor_parking(driver: webdriver) -> None:
         parking_button.click()
         print("Parking button clicked successfully")
 
-        time.sleep(3)
+        time.sleep(5)
     except Exception as e:
         print(f"Error: {e}")
         driver.quit()
