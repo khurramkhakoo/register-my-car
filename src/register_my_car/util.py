@@ -69,19 +69,19 @@ def add_vehicle_information(driver: webdriver) -> None:
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleMake')
-        apartment_number_field.send_keys(VEHICLE_MAKE)
+        apartment_number_field.send_keys(os.environ.get('VEHICLE_MAKE'))
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleModel')
-        apartment_number_field.send_keys(VEHICLE_MODEL)
+        apartment_number_field.send_keys(os.environ.get('VEHICLE_MODEL'))
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleLicensePlate')
-        apartment_number_field.send_keys(VEHICLE_LICENSE_PLATE)
+        apartment_number_field.send_keys(os.environ.get('VEHICLE_LICENSE_PLATE'))
         time.sleep(1)
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleLicensePlateConfirm')
-        apartment_number_field.send_keys(VEHICLE_LICENSE_PLATE)
+        apartment_number_field.send_keys(os.environ.get('VEHICLE_LICENSE_PLATE'))
 
         print("Form filled successfully")
 
