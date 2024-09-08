@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -63,7 +64,7 @@ def choose_visitor_parking(driver: webdriver) -> None:
 
 def add_vehicle_information(driver: webdriver) -> None:
     try:
-        apartment_number_field = driver.find_element(By.ID, 'vehicleApt')
+        apartment_number_field = driver.find_element(By.ID, os.environ.get('VEHICLE_APT'))
         apartment_number_field.send_keys(VEHICLE_APT)
         time.sleep(1)
 
