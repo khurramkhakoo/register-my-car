@@ -81,6 +81,20 @@ def add_vehicle_information(driver: webdriver) -> None:
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleLicensePlateConfirm')
         apartment_number_field.send_keys(VEHICLE_LICENSE_PLATE)
+
+        print("Form filled successfully")
+
+        time.sleep(1)
+    except Exception as e:
+        print(f"Error: {e}")
+        driver.quit()
+
+
+def take_screenshot(driver: webdriver) -> None:
+    try:
+        driver.save_screenshot('ss.png')
+        print("Successfully saved screenshot to ss.png")
+
         time.sleep(1)
     except Exception as e:
         print(f"Error: {e}")
