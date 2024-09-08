@@ -29,7 +29,7 @@ choose_visitor_parking(driver)
 add_vehicle_information(driver)
 # submit_final_form(driver)
 take_screenshot(driver)
-upload_screenshot_to_s3()
+upload_screenshot_to_s3(driver)
 
 # Closing the browser
 driver.quit()
