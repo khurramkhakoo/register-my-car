@@ -114,7 +114,7 @@ def take_screenshot(driver: webdriver) -> None:
         driver.quit()
 
 
-def upload_screenshot_to_s3() -> None:
+def upload_screenshot_to_s3(driver: webdriver) -> None:
     try:
         s3_client = boto3.client('s3')
         s3_client.upload_file('ss.png', 'register-my-car', 'ss.png')
