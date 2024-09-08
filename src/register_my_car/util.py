@@ -1,4 +1,5 @@
 import os
+import boto3
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -82,10 +83,21 @@ def add_vehicle_information(driver: webdriver) -> None:
 
         apartment_number_field = driver.find_element(By.ID, 'vehicleLicensePlateConfirm')
         apartment_number_field.send_keys(os.environ.get('VEHICLE_LICENSE_PLATE'))
+        time.sleep(1)
 
         print("Form filled successfully")
+    except Exception as e:
+        print(f"Error: {e}")
+        driver.quit()
 
-        time.sleep(1)
+
+def submit_final_form(driver: webdriver) -> None:
+    try:
+        submit_button = driver.find_element(By.ID, 'vehicleInformation')
+        submit_button.click()
+        print("Submit button clicked successfully")
+
+        time.sleep(3)
     except Exception as e:
         print(f"Error: {e}")
         driver.quit()
@@ -95,6 +107,18 @@ def take_screenshot(driver: webdriver) -> None:
     try:
         driver.save_screenshot('ss.png')
         print("Successfully saved screenshot to ss.png")
+
+        time.sleep(1)
+    except Exception as e:
+        print(f"Error: {e}")
+        driver.quit()
+
+
+def upload_screenshot_to_s3() -> None:
+    try:
+        s3_client = boto3.client('s3')
+        s3_client.upload_file('ss.png', 's3://register-my-car/', 'ss.png')
+        print('Screenshot uploaded successfully')
 
         time.sleep(1)
     except Exception as e:
