@@ -66,6 +66,8 @@ def choose_visitor_parking(driver: webdriver) -> None:
 def add_vehicle_information(driver: webdriver) -> None:
     try:
         apartment_number_field = driver.find_element(By.ID, 'vehicleApt')
+        print("apartment_number_field: ", apartment_number_field)
+        print("os.environ.get('VEHICLE_APT'): ", os.environ.get('VEHICLE_APT'))
         apartment_number_field.send_keys(os.environ.get('VEHICLE_APT'))
         print("Filled Apt number")
         time.sleep(1)
