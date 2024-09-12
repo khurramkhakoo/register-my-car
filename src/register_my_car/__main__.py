@@ -27,7 +27,7 @@ fill_property_name_form(driver)
 select_property(driver)
 choose_visitor_parking(driver)
 add_vehicle_information(driver)
-submit_final_form(driver)
+# submit_final_form(driver)
 take_screenshot(driver)
 upload_screenshot_to_s3(driver)
 
