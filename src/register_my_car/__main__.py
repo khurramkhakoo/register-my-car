@@ -10,7 +10,7 @@ from util import *
 app = Flask(__name__)
 
 
-@app.route('/register', methods=['POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def your_function():
     # Path to your ChromeDriver
     chrome_driver_path = '/usr/bin/chromedriver'
