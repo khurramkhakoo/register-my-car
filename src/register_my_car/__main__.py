@@ -43,5 +43,12 @@ def your_function():
     return jsonify({"message": "API is working!"})
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(
+        host='0.0.0.0',
+        port=5000,
+        ssl_context=(
+            '/etc/ssl/certs/selfsigned.crt',
+            '/etc/ssl/private/selfsigned.key'
+        )
+    )
