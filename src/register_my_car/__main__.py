@@ -48,7 +48,7 @@ if __name__ == "__main__":
         host='0.0.0.0',
         port=5000,
         ssl_context=(
-            '/etc/ssl/certs/selfsigned.crt',
-            '/etc/ssl/private/selfsigned.key'
+            '/home/ec2-user/workspace/register-my-car/ssl/selfsigned.crt',
+            '/home/ec2-user/workspace/register-my-car/ssl/selfsigned.key'
         )
     )
