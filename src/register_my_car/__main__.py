@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -8,7 +9,7 @@ from constants import URL
 from util import *
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/register', methods=['GET', 'POST'])
 def your_function():
