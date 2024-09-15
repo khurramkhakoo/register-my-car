@@ -44,11 +44,4 @@ def your_function():
 
 
 if __name__ == "__main__":
-    app.run(
-        host='0.0.0.0',
-        port=5000,
-        ssl_context=(
-            '/home/ec2-user/workspace/register-my-car/ssl/selfsigned.crt',
-            '/home/ec2-user/workspace/register-my-car/ssl/selfsigned.key'
-        )
-    )
+    app.run(host='0.0.0.0', port=5000)
